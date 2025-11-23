@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sain_smart_fdti_relay_control.iml" filepath="$PROJECT_DIR$/.idea/sain_smart_fdti_relay_control.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/sainsmart_fdti_relay_control.iml" filepath="$PROJECT_DIR$/.idea/sainsmart_fdti_relay_control.iml" />
     </modules>
   </component>
 </project>

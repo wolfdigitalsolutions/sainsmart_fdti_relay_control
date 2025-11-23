@@ -551,8 +551,8 @@ SainSmart 4-Relay Control v1.0
 A command-line and GUI tool for controlling FTDI-based relay boards.
 
 USAGE:
-    sain_smart_fdti_relay_control.exe                         Launch GUI
-    sain_smart_fdti_relay_control.exe [OPTIONS] [COMMANDS]    CLI mode
+    sainsmart_fdti_relay_control.exe                         Launch GUI
+    sainsmart_fdti_relay_control.exe [OPTIONS] [COMMANDS]    CLI mode
 
 DEVICE SELECTION:
     --list-devices                  List all available FTDI devices
@@ -576,11 +576,11 @@ CONFIGURATION:
     --config PATH                   Use custom settings XML file
 
 EXAMPLES:
-    sain_smart_fdti_relay_control.exe --list-devices
-    sain_smart_fdti_relay_control.exe --on 1 2
-    sain_smart_fdti_relay_control.exe --state 1 3
-    sain_smart_fdti_relay_control.exe --momentary 2 --duration 2.0
-    sain_smart_fdti_relay_control.exe --device-serial A1B2C3D4 --quiet --on 1
+    sainsmart_fdti_relay_control.exe --list-devices
+    sainsmart_fdti_relay_control.exe --on 1 2
+    sainsmart_fdti_relay_control.exe --state 1 3
+    sainsmart_fdti_relay_control.exe --momentary 2 --duration 2.0
+    sainsmart_fdti_relay_control.exe --device-serial A1B2C3D4 --quiet --on 1
 
 EXIT CODES:
     0=Success, 1=General error, 2=No devices, 3=Device not found,
@@ -993,7 +993,7 @@ if wx:
 
                 device = self.devices[self.device_choice.GetSelection()]
                 self.cli_text.SetValue(
-                    f"sain_smart_fdti_relay_control.exe --device-serial {device['serial']} --on {relay_num}"
+                    f"sainsmart_fdti_relay_control.exe --device-serial {device['serial']} --on {relay_num}"
                 )
 
             except RelayControlException as e:
@@ -1017,7 +1017,7 @@ if wx:
 
                 device = self.devices[self.device_choice.GetSelection()]
                 self.cli_text.SetValue(
-                    f"sain_smart_fdti_relay_control.exe --device-serial {device['serial']} --off {relay_num}"
+                    f"sainsmart_fdti_relay_control.exe --device-serial {device['serial']} --off {relay_num}"
                 )
 
             except RelayControlException as e:
@@ -1041,7 +1041,7 @@ if wx:
 
                 device = self.devices[self.device_choice.GetSelection()]
                 self.cli_text.SetValue(
-                    f"sain_smart_fdti_relay_control.exe --device-serial {device['serial']} --toggle {relay_num}"
+                    f"sainsmart_fdti_relay_control.exe --device-serial {device['serial']} --toggle {relay_num}"
                 )
 
             except RelayControlException as e:
@@ -1062,7 +1062,7 @@ if wx:
 
                 device = self.devices[self.device_choice.GetSelection()]
                 self.cli_text.SetValue(
-                    f"sain_smart_fdti_relay_control.exe --device-serial {device['serial']} --state 1 2 3 4"
+                    f"sainsmart_fdti_relay_control.exe --device-serial {device['serial']} --state 1 2 3 4"
                 )
 
             except RelayControlException as e:
@@ -1083,7 +1083,7 @@ if wx:
 
                 device = self.devices[self.device_choice.GetSelection()]
                 self.cli_text.SetValue(
-                    f"sain_smart_fdti_relay_control.exe --device-serial {device['serial']} --state"
+                    f"sainsmart_fdti_relay_control.exe --device-serial {device['serial']} --state"
                 )
 
             except RelayControlException as e:
@@ -1164,7 +1164,7 @@ def main():
         if wx is None:
             print("Error: wxPython not installed. Cannot launch GUI.")
             print("Install with: pip install wxPython")
-            print("Or use CLI mode: sain_smart_fdti_relay_control.exe --help")
+            print("Or use CLI mode: sainsmart_fdti_relay_control.exe --help")
             sys.exit(1)
 
         app = wx.App()
