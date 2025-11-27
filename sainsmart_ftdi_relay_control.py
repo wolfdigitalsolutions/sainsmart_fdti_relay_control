@@ -1126,17 +1126,17 @@ def main():
                             help='Connect to device by serial number')
 
         # Relay commands
-        parser.add_argument('--state', nargs='+', type=int, metavar='RELAY',
+        parser.add_argument('-s','--state', nargs='+', type=int, metavar='RELAY',
                             help='Set absolute state')
         parser.add_argument('--on', nargs='+', type=int, metavar='RELAY',
                             help='Turn on specified relays')
         parser.add_argument('--off', nargs='+', type=int, metavar='RELAY',
                             help='Turn off specified relays')
-        parser.add_argument('--toggle', nargs='+', type=int, metavar='RELAY',
+        parser.add_argument('-t' ,'--toggle', nargs='+', type=int, metavar='RELAY',
                             help='Toggle specified relays')
-        parser.add_argument('--momentary', nargs='+', type=int, metavar='RELAY',
+        parser.add_argument('-m', '--momentary', nargs='+', type=int, metavar='RELAY',
                             help='Pulse specified relays')
-        parser.add_argument('--duration', type=float,
+        parser.add_argument('-d', '--duration', type=float,
                             help='Duration for momentary pulse')
 
         # Output options
