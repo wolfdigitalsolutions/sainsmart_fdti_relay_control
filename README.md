@@ -173,7 +173,7 @@ For batch file integration:
 
 ```batch
 @echo off
-relay_control.exe --device-serial A1B2C3D4 --quiet --on 1 2
+sainsmart_ftdi_relay_control.exe --device-serial A1B2C3D4 --quiet --on 1 2
 
 if errorlevel 1 (
     echo Failed to control relays! Error code: %errorlevel%
